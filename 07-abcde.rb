@@ -8,15 +8,20 @@
 #     当 z > 0 输出 "D"
 #     当 z < 0 输出 "E"
 
-print "请输入一个整数x，然后按 Enter: "
+print '请输入一个整数x，然后按 Enter: '
 x = gets
 
-print "请输入一个整数y，然后按 Enter: "
+print '请输入一个整数y，然后按 Enter: '
 y = gets
 
-print "请输入一个整数z，然后按 Enter: "
+print '请输入一个整数z，然后按 Enter: '
 z = gets
 
 # ....
 
-puts "结果是________(A或B或C或D或E)"
+a = 'A' if x.to_i < 0
+a = 'B' if x.to_i > 0 && y.to_i > 0 && z.to_i > 0
+a = 'C' if x.to_i > 0 && y.to_i > 0 && z.to_i < 0
+a = 'D' if x.to_i > 0 && y.to_i < 0 && z.to_i > 0
+a = 'E' if x.to_i > 0 && y.to_i < 0 && z.to_i < 0
+puts "结果是#{a}(A或B或C或D或E)"
