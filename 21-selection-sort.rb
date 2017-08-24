@@ -2,7 +2,11 @@
 # https://zh.wikipedia.org/wiki/选择排序
 
 def selection_sort(arr)
-  #...
+  arr_new = []
+  arr.each_with_index do |i|
+    arr_new << arr.min if arr.min = i
+  end
+  arr_new
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
